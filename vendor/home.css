@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'calibri';
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+ 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 17px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 2em;
+    color: #f0f8ff;
+    user-select: none;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width:100%;
+    height: 3px;
+    background: #f0f8ff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btn-login-register{
+    width: 80px;
+    height: 40px;
+    font-size: 1.08rem;
+    outline: none;
+    background: transparent;
+    border: 2px solid aliceblue;
+    border-radius: 30px;
+    cursor: pointer;
+    color:#f0f8ff;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: .5s;
+}
+
+.navigation .btn-login-register:hover{
+    background: #f0f8ff;
+    color: black;
+}
+
+.container{
+    position: relative;
+    width: 350px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid aliceblue;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .5s ease, height .2s ease;
+    transform: scale(0);
+    overflow: hidden;
+}
+
+.container.active-popup_1, 
+.container.active-popup_2{
+    transform: scale(1);
+}
+
+.container.active_1, 
+.container.active-popup_2{
+    height: 520px;
+    width: 400px;
+}
+
+.container .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.container .form-box.login, 
+.container.active_1 .form-box.register, 
+.container.active-popup_2 .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.container.active_1 .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.container.active_2 .form-box.register{
+    transition: none;
+    transform: translateX(400px);
+}
+
+.container.active-popup_2
+.form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(-400px);
+}
+
+.container.active_2{
+    width: 350px;
+    height: 440px;
+}
+
+.container.active_2 .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.container .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    font-family: 'poppins';
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width:100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 57px;
+    color: white
+}
+
+.word{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    font-size: 1.2em;
+    outline: none;
+    background: transparent;
+    border: 2px solid aliceblue;
+    border-radius: 30px;
+    cursor: pointer;
+    color:#f0f8ff;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.login-register{
+    font-size: .94em;
+    color: #f0f8ff;
+    text-align: center;
+    font-weight: 500;
+     margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #030D16;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/33a9757d42.js"></script>
+</head>
+<body>
+    <header>
+        <h2 class="logo">MSR</h2>
+      <nav class="navigation">
+        <a href="/Intern_Project/vendor/view.php">View Product</a>
+        <a href="#">Contact</a>
+        <button class="btn-login-popup btn-login-register">Login</button>
+        <button class="btn-register-popup btn-login-register">Register</button>
+      </nav>
+    </header>
+ 
+    <div class="container">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" name="username" id="name" required>
+                    <label for="name">Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" name="password" id="pass" required>
+                    <label for="pass">Password</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link"><span class="word">Register</span></a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form action="register.php" method="POST">
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" name="username" id="name" required>
+                    <label for="name">Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" name="password" id="pass" required>
+                    <label for="pass">Password</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" name="repass" id="repass" required>
+                    <label for="repass">Re-type Password</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link"><span class="word">Login</span></a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const loginlink = document.querySelector(".login-link");
+        const registerlink = document.querySelector(".register-link");
+        const btnPopup_1 = document.querySelector('.btn-login-popup');
+        const btnPopup_2 = document.querySelector('.btn-register-popup');
+
+
+        registerlink.addEventListener('click',()=>{
+            container.classList.add('active_1');
+            container.classList.remove('active_2');
+        })
+
+
+        loginlink.addEventListener('click',()=>{
+            container.classList.add('active_2');
+            container.classList.remove('active_1');
+        })
+
+
+        btnPopup_1.addEventListener('click',()=>{
+            container.classList.add('active-popup_1');
+            container.classList.remove('active-popup_2');
+            container.classList.remove('active_1');
+            container.classList.remove('active_2');
+        })
+
+
+        btnPopup_2.addEventListener('click',()=>{
+            container.classList.add('active-popup_2');
+            container.classList.remove('active-popup_1');
+            container.classList.remove('active_1');
+            container.classList.remove('active_2');
+        })
+
+
+    </script>
+</body>
+</html>
