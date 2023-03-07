@@ -10,12 +10,12 @@ After installing the required software, you can clone this repository and place 
 # Project Structure
 The project consists of the following files and folders:
 
-index.php: The landing page of the website.
-login.php: The page for vendors and customers to login to the website.
-register.php: The page for customers to register a new account.
-vendor/: The folder containing the pages for vendors to manage their products and view orders.
-customer/: The folder containing the pages for customers to browse products, add them to cart, and place orders.
-database/: The folder containing the SQL file to create the required database tables.
+**index.php:** The landing page of the website.
+**login.php:** The page for vendors and customers to login to the website.
+**register.php:** The page for customers to register a new account.
+**vendor/:** The folder containing the pages for vendors to manage their products and view orders.
+**customer/:** The folder containing the pages for customers to browse products, add them to cart, and place orders.
+**database/:** The folder containing the SQL file to create the required database tables.
 # Contributing
 Contributions are welcome. You can open an issue to report a bug or request a feature. You can also fork this repository and create a pull request to contribute code changes.
 
