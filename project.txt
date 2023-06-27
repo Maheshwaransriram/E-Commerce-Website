@@ -1,0 +1,19 @@
+MVP E-commerce -Intern Project
+
+Admin
+    Manage vendor
+    Manage clients
+    Manage web features 
+
+vendor
+    Authentication
+    Managing a product
+        add
+            name, description, image, price
+         view, delete, edit
+
+client
+    Authentication
+    View product
+    add to cart
+    buy

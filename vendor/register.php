@@ -22,8 +22,8 @@
                     $_SESSION['login_status']=true;
                     $res=mysqli_query($conn,"select * from vendor where username='$uname' and password='$upass'");
                     $row=mysqli_fetch_assoc($res);
-                    $userid=$row['userid'];
-                    $_SESSION['userid']=$userid;
+                    $userid=$row['vendorid'];
+                    $_SESSION['vendorid']=$userid;
                     header("refresh:1;url=/Intern_Project/vendor/view.php");
                     echo "<script>alert('Registered successful')</script>";
                 }

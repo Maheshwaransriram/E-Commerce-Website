@@ -26,8 +26,8 @@
         else{
             $_SESSION['login_status']=true;
             $row=mysqli_fetch_assoc($res_obj);
-            $userid=$row['userid'];
-            $_SESSION['userid']=$userid;
+            $userid=$row['vendorid'];
+            $_SESSION['vendorid']=$userid;
             header("refresh:1;url=/Intern_Project/vendor/view.php");
             echo "<script>alert('Login successful')</script>";
         }

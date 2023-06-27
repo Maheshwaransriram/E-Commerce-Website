@@ -25,7 +25,7 @@
                 <div class='details'>$details</div>
                 <div class='footer'>";
         
-        if (isset($_SESSION['userid'])) {
+        if (isset($_SESSION['vendorid'])) {
             echo "
                     <button class='btn'>Edit</button>
                     

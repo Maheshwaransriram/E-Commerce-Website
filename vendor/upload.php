@@ -7,7 +7,7 @@
         $price = $_POST['price'];
         $details = mysqli_real_escape_string($conn, $_POST['details']);
         $qty = $_POST['quantity'];
-        $vendorid = $_SESSION['userid'];
+        $vendorid = $_SESSION['vendorid'];
 
         $fname = $_FILES['pdtimg']['name'];
 

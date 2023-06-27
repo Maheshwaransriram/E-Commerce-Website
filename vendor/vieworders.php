@@ -10,7 +10,7 @@ if(!isset($_SESSION['login_status']) || $_SESSION['login_status'] != "true") {
     exit();
 }
 
-$userid=$_SESSION['userid'];
+$userid=$_SESSION['vendorid'];
 if (isset($_GET["search"])) {
     $search_value = trim($_GET["search"]);
     $sql_result = mysqli_query($conn, "select * from orders join product on orders.pid=product.pid WHERE userid='$search_value'");

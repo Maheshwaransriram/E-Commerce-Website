@@ -20,7 +20,7 @@
                 $status=mysqli_query($conn, "insert into user(username, password) values('$uname','$upass')");
                 if($status){
                     $_SESSION['login_status']=true;
-                    $res=mysqli_query($conn,"select * from client where username='$uname' and password='$upass'");
+                    $res=mysqli_query($conn,"select * from user where username='$uname' and password='$upass'");
                     $row=mysqli_fetch_assoc($res);
                     $userid=$row['userid'];
                     $_SESSION['userid']=$userid;
