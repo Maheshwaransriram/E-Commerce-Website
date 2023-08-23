@@ -6,7 +6,7 @@ include "menu.php";
 
 if(!isset($_SESSION['login_status']) || $_SESSION['login_status'] != "true") {
     echo "<script>alert('Please login to View Orders');</script>";
-    header("refresh:1;url=/Intern_Project/vendor/home.html");
+    header("refresh:1;url=home.html");
     exit();
 }
 
@@ -83,7 +83,7 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Orders</title>
     <script src="https://kit.fontawesome.com/33a9757d42.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/Day 12/boot.css">
+    <link rel="stylesheet" href="/shared/boot.css">
     <script src='dark-mode.js'></script>
     <style>
         .order{

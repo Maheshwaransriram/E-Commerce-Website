@@ -24,7 +24,7 @@
                     $row=mysqli_fetch_assoc($res);
                     $userid=$row['userid'];
                     $_SESSION['userid']=$userid;
-                    header("refresh:1;url=/Intern_Project/client/view.php");
+                    header("refresh:1;url=view.php");
                     echo "<script>alert('Registered successful')</script>";
                 }
                 else{
@@ -37,7 +37,7 @@
         }
         else{
             echo "<script>alert('Username already exist')</script>";
-            header("refresh:1;url=/Intern_Project/client/home.html");
+            header("refresh:1;url=home.html");
         }
 
     }

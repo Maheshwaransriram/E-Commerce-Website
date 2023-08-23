@@ -2,7 +2,7 @@
     include "menu.php";
     if(!isset($_SESSION['login_status']) || $_SESSION['login_status'] != "true") {
         echo "<script>alert('Please login to Add Products');</script>";
-        header("refresh:1;url=/Intern_Project/vendor/home.html");
+        header("refresh:1;url=home.html");
         exit();
     }
 ?>
@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
-    <link rel="stylesheet" href="/Day 12/boot.css">
+    <link rel="stylesheet" href="/shared/boot.css">
     <script src='dark-mode.js'></script>
 </head>
 <body class="bg-light" style="margin:8px; font-family:inherit;">

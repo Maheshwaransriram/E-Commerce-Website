@@ -7,7 +7,7 @@
     // Check if user is logged in
     if(!isset($_SESSION['login_status']) || $_SESSION['login_status'] != "true") {
         echo "<script>alert('Please login to buy products');</script>";
-        header("refresh:1;url=/Intern_Project/client/home.html");
+        header("refresh:1;url=home.html");
         exit();
     }
     else{

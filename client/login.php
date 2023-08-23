@@ -18,19 +18,19 @@
 
         if($count_1==0){
             echo "<script>alert(\"Username doesn't exist\")</script>";
-            header("refresh:1;url=/Intern_Project/client/home.html");
+            header("refresh:1;url=home.html");
         }
        
         else if($count_2==0){
             echo "<script>alert(\"Password doesn't match\")</script>";
-            header("refresh:1;url=/Intern_Project/client/home.html");
+            header("refresh:1;url=home.html");
         }
         else{
             $_SESSION['login_status']=true;
             $row=mysqli_fetch_assoc($res_obj);
             $userid=$row['userid'];
             $_SESSION['userid']=$userid;
-           header("refresh:1;url=/Intern_Project/client/view.php");
+           header("refresh:1;url=view.php");
            echo "<script>alert('Login successful')</script>";
         }
     }

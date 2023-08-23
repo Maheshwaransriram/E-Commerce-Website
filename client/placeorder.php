@@ -10,7 +10,7 @@
 
         if($item){
             echo "<script>alert('Order placed Successfully')</script>";
-            header("refresh:1;url=/Intern_Project/client/vieworder.php");
+            header("refresh:1;url=vieworder.php");
         }
         else{
             echo "Error in sql syntax";
@@ -27,7 +27,7 @@
 
         if($status){
             echo "<script>alert('Order placed Successfully')</script>";
-            header("refresh:1;url=/Intern_Project/client/vieworder.php");
+            header("refresh:1;url=vieworder.php");
         }
         else{
             echo "Error in sql syntax";

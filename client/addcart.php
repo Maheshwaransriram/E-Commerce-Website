@@ -4,7 +4,7 @@
     session_start();
     if($_SESSION['login_status']==false){
         echo "<script>alert('Login to buy products')</script>";
-        header("refresh:1;url=/Intern_Project/client/home.html");
+        header("refresh:1;url=home.html");
     }
     else{
         $userid=$_SESSION['userid'];
@@ -17,7 +17,7 @@
         
         if($status){
             echo "<script>alert('Added to Cart')</script>";
-            header("refresh:0.5;url=/Intern_Project/client/view.php");
+            header("refresh:0.5;url=view.php");
         }
         else{
             echo "Error to SQL syntax";
